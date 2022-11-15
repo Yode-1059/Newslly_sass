@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+$color-txt:#888888;
+$color-black:#202124;
+$color-cr:#BBBBBB;
+$color-pink:#FA6980;
+$color-white:#FFF;
+$color-glay:#F6F6F6;
+$color-border:#DDDDDD;
+
+@mixin inner {
+    max-width: 1200px;
+    margin: auto;
+    width: 80%;
+}
+
+@mixin py {
+    padding: 60px 0;
+}
+
+@mixin title {
+    font-size: 24px;
+    font-weight: bold;
+    border-left: $color-pink 10px solid;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+p {
+    color: $color-txt;
+    font-size: 14px;
+    line-height: (24/14);
+}
+
+img {
+    width: auto;
+    height: auto;
+    margin: auto;
+    flex: 1;
+}
+
+
+
+/*header*/
+.header {
+    &__logo {
+        margin: auto;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+
+/*unit*/
+.unit {
+    &__cathc {
+        color: $color-pink;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    &__title {
+        font-size: 18px;
+        font-weight: bold;
+        color: $color-black;
+        margin-bottom: 15px;
+
+        &--border {
+            border-bottom: 1px $color-border solid;
+            padding-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: $color-black;
+            margin-bottom: 15px;
+        }
+    }
+}
+
+/*card*/
+.card {
+    background-color: $color-white;
+
+    &__txt {
+        padding: 35px;
+    }
+
+    &__title {
+        font-size: 18px;
+        color: $color-black;
+        margin-bottom: 15px;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+/*time*/
+.time {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: url(../images/icon_time.png);
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+/*btn*/
+.btn {
+    background-color: $color-pink;
+    width: (160/310*100%);
+    padding: 13px 0;
+    text-decoration: none;
+    color: $color-white;
+    font-weight: bold;
+    font-size: 12px;
+    margin: 25px 0 0 auto;
+    display: block;
+    text-align: center;
+
+    &--black {
+        background-color: $color-black;
+        width: 160px;
+        padding: 13px 0;
+        text-decoration: none;
+        color: $color-white;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 25px 0 0 auto;
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+/*footer*/
+.footer {
+    background-color: $color-black;
+    padding: 100px 0 40px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__cr {
+        font-size: 12px;
+        color: $color-cr;
+    }
+}
+
+/*index_____*/
+/*more*/
+.more {
+    @include py();
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title();
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__unit {
+        width: (380/800*100%);
+        margin-bottom: 60px;
+    }
+}
+
+/*trend*/
+
+.trend {
+    background-color: $color-glay;
+    @include py();
+
+    &__title {
+        @include title();
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: (380/800*100%);
+    }
+}
+
+/*about*/
+/*news*/
+.news {
+    @include inner();
+    @include py();
+
+    &__item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+/*dis*/
+
+.dis {
+    background-color: $color-glay;
+    @include py();
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        @include flex();
+    }
+
+    &__item {
+        width: (240/800*100%);
+    }
+}
